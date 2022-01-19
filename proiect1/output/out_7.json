@@ -1,0 +1,519 @@
+{
+  "annualChildren" : [ {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Maria",
+      "city" : "Constanta",
+      "age" : 4,
+      "giftsPreferences" : [ "Board Games", "Books" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 4.0 ],
+      "assignedBudget" : 152.75862068965517,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Bucuresti",
+      "age" : 11,
+      "giftsPreferences" : [ "Board Games", "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 2.0,
+      "niceScoreHistory" : [ 2.0 ],
+      "assignedBudget" : 30.551724137931036,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Radu",
+      "city" : "Braila",
+      "age" : 9,
+      "giftsPreferences" : [ "Board Games", "Toys", "Books", "Clothes" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 106.93103448275862,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Pop",
+      "firstName" : "Miruna",
+      "city" : "Braila",
+      "age" : 2,
+      "giftsPreferences" : [ "Board Games", "Toys" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 152.75862068965517,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Maria",
+      "city" : "Constanta",
+      "age" : 5,
+      "giftsPreferences" : [ "Board Games", "Books" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 4.0, 10.0 ],
+      "assignedBudget" : 116.28750000000001,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Bucuresti",
+      "age" : 12,
+      "giftsPreferences" : [ "Board Games", "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 4.666666666666667,
+      "niceScoreHistory" : [ 2.0, 6.0 ],
+      "assignedBudget" : 77.525,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Radu",
+      "city" : "Braila",
+      "age" : 10,
+      "giftsPreferences" : [ "Board Games", "Toys", "Books", "Clothes" ],
+      "averageScore" : 5.0,
+      "niceScoreHistory" : [ 7.0, 3.0 ],
+      "assignedBudget" : 83.0625,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Pop",
+      "firstName" : "Miruna",
+      "city" : "Braila",
+      "age" : 3,
+      "giftsPreferences" : [ "Board Games", "Toys" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 7.0, 2.0 ],
+      "assignedBudget" : 166.125,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Maria",
+      "city" : "Constanta",
+      "age" : 6,
+      "giftsPreferences" : [ "Board Games", "Books" ],
+      "averageScore" : 8.0,
+      "niceScoreHistory" : [ 4.0, 10.0, 10.0 ],
+      "assignedBudget" : 127.17703349282296,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Bucuresti",
+      "age" : 13,
+      "giftsPreferences" : [ "Board Games", "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 5.2,
+      "niceScoreHistory" : [ 2.0, 6.0, 6.0 ],
+      "assignedBudget" : 82.66507177033492,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Radu",
+      "city" : "Braila",
+      "age" : 11,
+      "giftsPreferences" : [ "Board Games", "Toys", "Books", "Clothes" ],
+      "averageScore" : 4.666666666666667,
+      "niceScoreHistory" : [ 7.0, 3.0, 4.0 ],
+      "assignedBudget" : 74.1866028708134,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Pop",
+      "firstName" : "Miruna",
+      "city" : "Braila",
+      "age" : 4,
+      "giftsPreferences" : [ "Board Games", "Toys" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 7.0, 2.0, 1.0 ],
+      "assignedBudget" : 158.9712918660287,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Maria",
+      "city" : "Constanta",
+      "age" : 7,
+      "giftsPreferences" : [ "Board Games", "Books" ],
+      "averageScore" : 8.5,
+      "niceScoreHistory" : [ 4.0, 10.0, 10.0, 10.0 ],
+      "assignedBudget" : 151.96598443355433,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Bucuresti",
+      "age" : 14,
+      "giftsPreferences" : [ "Board Games", "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 5.428571428571429,
+      "niceScoreHistory" : [ 2.0, 6.0, 6.0, 6.0 ],
+      "assignedBudget" : 97.053906024791,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Radu",
+      "city" : "Braila",
+      "age" : 12,
+      "giftsPreferences" : [ "Board Games", "Toys", "Books", "Clothes" ],
+      "averageScore" : 6.1,
+      "niceScoreHistory" : [ 7.0, 3.0, 4.0, 9.0 ],
+      "assignedBudget" : 109.05794176996251,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Pop",
+      "firstName" : "Miruna",
+      "city" : "Braila",
+      "age" : 5,
+      "giftsPreferences" : [ "Board Games", "Toys" ],
+      "averageScore" : 4.75,
+      "niceScoreHistory" : [ 7.0, 2.0, 1.0, 9.0 ],
+      "assignedBudget" : 84.92216777169213,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Maria",
+      "city" : "Constanta",
+      "age" : 8,
+      "giftsPreferences" : [ "Board Games", "Books" ],
+      "averageScore" : 8.8,
+      "niceScoreHistory" : [ 4.0, 10.0, 10.0, 10.0, 10.0 ],
+      "assignedBudget" : 157.05282005371532,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Bucuresti",
+      "age" : 15,
+      "giftsPreferences" : [ "Board Games", "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 5.555555555555555,
+      "niceScoreHistory" : [ 2.0, 6.0, 6.0, 6.0, 6.0 ],
+      "assignedBudget" : 99.14950760966875,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Radu",
+      "city" : "Braila",
+      "age" : 13,
+      "giftsPreferences" : [ "Board Games", "Toys", "Books", "Clothes" ],
+      "averageScore" : 6.066666666666666,
+      "niceScoreHistory" : [ 7.0, 3.0, 4.0, 9.0, 6.0 ],
+      "assignedBudget" : 108.27126230975827,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Pop",
+      "firstName" : "Miruna",
+      "city" : "Braila",
+      "age" : 6,
+      "giftsPreferences" : [ "Board Games", "Toys" ],
+      "averageScore" : 4.4,
+      "niceScoreHistory" : [ 7.0, 2.0, 1.0, 9.0, 3.0 ],
+      "assignedBudget" : 78.52641002685766,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Maria",
+      "city" : "Constanta",
+      "age" : 9,
+      "giftsPreferences" : [ "Board Games", "Books" ],
+      "averageScore" : 9.0,
+      "niceScoreHistory" : [ 4.0, 10.0, 10.0, 10.0, 10.0, 10.0 ],
+      "assignedBudget" : 149.9506675350049,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Bucuresti",
+      "age" : 16,
+      "giftsPreferences" : [ "Board Games", "Toys", "Sweets", "Clothes" ],
+      "averageScore" : 5.636363636363637,
+      "niceScoreHistory" : [ 2.0, 6.0, 6.0, 6.0, 6.0, 6.0 ],
+      "assignedBudget" : 93.90849886030611,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Gummy Bears",
+        "price" : 10.0,
+        "category" : "Sweets"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Radu",
+      "city" : "Braila",
+      "age" : 14,
+      "giftsPreferences" : [ "Board Games", "Toys", "Books", "Clothes" ],
+      "averageScore" : 6.619047619047619,
+      "niceScoreHistory" : [ 7.0, 3.0, 4.0, 9.0, 6.0, 8.0 ],
+      "assignedBudget" : 110.28117876913059,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 3,
+      "lastName" : "Pop",
+      "firstName" : "Miruna",
+      "city" : "Braila",
+      "age" : 7,
+      "giftsPreferences" : [ "Board Games", "Toys" ],
+      "averageScore" : 5.333333333333333,
+      "niceScoreHistory" : [ 7.0, 2.0, 1.0, 9.0, 3.0, 10.0 ],
+      "assignedBudget" : 88.85965483555846,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
+      } ]
+    } ]
+  } ]
+}
