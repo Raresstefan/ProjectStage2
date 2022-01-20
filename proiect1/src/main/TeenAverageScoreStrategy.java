@@ -15,11 +15,11 @@ public class TeenAverageScoreStrategy implements AverageScoreStrategy {
     public Double getAverageScore() {
         Double sumScores = 0.0;
         int sumIndexes = 0;
+        int i = 1;
         for (Double score : this.scores) {
-            int index = this.scores.indexOf(score);
-            index++;
-            sumScores += score * index;
-            sumIndexes += index;
+            sumScores += score * i;
+            sumIndexes += i;
+            i++;
         }
         return (sumScores / sumIndexes);
     }

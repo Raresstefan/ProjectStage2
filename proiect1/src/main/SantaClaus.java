@@ -134,6 +134,22 @@ public class SantaClaus {
             childInput.allocateGiftFromSanta(this);
         }
     }
+    public void allocateGiftsWithStrategy(String strategy) {
+        sortGiftsByPrice();
+//        this.children = GiftsFactory.sortChildren(strategy, children).sortChildren();
+//        System.out.println(strategy);
+        for (ChildInput childInput : this.children) {
+            childInput.allocateGiftFromSanta(this);
+        }
+    }
+
+    public void setChildren(List<ChildInput> children) {
+        this.children = children;
+    }
+
+    public void removeGift(final Gift gift) {
+        this.gifts.remove(gift);
+    }
     /**
      * Getter for the list of children
      */

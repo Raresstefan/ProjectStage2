@@ -16,7 +16,7 @@ public class ChildOutput {
     private Double averageScore;
     private List<Double> niceScoreHistory;
     private Double assignedBudget;
-    private List<Gift> receivedGifts;
+    private List<GiftOutput> receivedGifts;
 
     public ChildOutput() {
         this.giftsPreferences = new ArrayList<>();
@@ -74,7 +74,7 @@ public class ChildOutput {
     /**
      * Setter for the list of gifts received by the child
      */
-    public void setReceivedGifts(final List<Gift> receivedGifts) {
+    public void setReceivedGifts(final List<GiftOutput> receivedGifts) {
         this.receivedGifts.addAll(receivedGifts);
     }
     /**
@@ -140,7 +140,7 @@ public class ChildOutput {
     /**
      * Getter for the list of gifts received by the child
      */
-    public List<Gift> getReceivedGifts() {
+    public List<GiftOutput> getReceivedGifts() {
         return receivedGifts;
     }
 }
