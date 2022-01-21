@@ -117,9 +117,9 @@
       "city" : "Timisoara",
       "age" : 16,
       "giftsPreferences" : [ "Board Games", "Toys", "Technology" ],
-      "averageScore" : 8.0,
+      "averageScore" : 7.5,
       "niceScoreHistory" : [ 5.0, 5.0, 10.0 ],
-      "assignedBudget" : 104.72727272727273,
+      "assignedBudget" : 100.93457943925235,
       "receivedGifts" : [ {
         "productName" : "Puzzle",
         "price" : 50.0,
@@ -138,7 +138,7 @@
       "giftsPreferences" : [ "Sweets" ],
       "averageScore" : 5.0,
       "niceScoreHistory" : [ 5.0, 7.0, 3.0 ],
-      "assignedBudget" : 65.45454545454545,
+      "assignedBudget" : 67.28971962616824,
       "receivedGifts" : [ ]
     }, {
       "id" : 2,
@@ -149,15 +149,15 @@
       "giftsPreferences" : [ "Books", "Clothes", "Toys" ],
       "averageScore" : 5.333333333333333,
       "niceScoreHistory" : [ 2.0, 6.0, 8.0 ],
-      "assignedBudget" : 69.81818181818181,
+      "assignedBudget" : 71.77570093457945,
       "receivedGifts" : [ {
         "productName" : "Diary of a Wimpy Kid",
         "price" : 25.0,
         "category" : "Books"
       }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
       } ]
     } ]
   } ]
