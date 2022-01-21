@@ -87,14 +87,10 @@
       "city" : "Bucuresti",
       "age" : 13,
       "giftsPreferences" : [ "Technology", "Board Games", "Toys" ],
-      "averageScore" : 2.6,
+      "averageScore" : 2.5,
       "niceScoreHistory" : [ 5.0, 2.0, 2.0 ],
-      "assignedBudget" : 158.06349206349208,
+      "assignedBudget" : 153.2,
       "receivedGifts" : [ {
-        "productName" : "Headphones",
-        "price" : 100.0,
-        "category" : "Technology"
-      }, {
         "productName" : "Uno",
         "price" : 10.0,
         "category" : "Board Games"
@@ -112,10 +108,10 @@
       "giftsPreferences" : [ "Technology" ],
       "averageScore" : 10.0,
       "niceScoreHistory" : [ 7.0, 5.0, 7.0 ],
-      "assignedBudget" : 607.936507936508,
+      "assignedBudget" : 612.8,
       "receivedGifts" : [ {
-        "productName" : "Headphones",
-        "price" : 100.0,
+        "productName" : "Laptop",
+        "price" : 500.0,
         "category" : "Technology"
       } ]
     } ]

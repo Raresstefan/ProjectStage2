@@ -51,7 +51,7 @@ public class SantaClaus {
      */
     public Gift searchGiftByPreference(final Category category) {
         for (Gift gift : this.gifts) {
-            if (gift.getCategory().equals(category)) {
+            if (gift.getCategory().equals(category) && gift.getQuantity() > 0) {
                 return gift;
             }
         }
@@ -133,6 +133,45 @@ public class SantaClaus {
         for (ChildInput childInput : this.children) {
             childInput.allocateGiftFromSanta(this);
         }
+    }
+    public Gift findCheapestGift(final Category category) {
+        sortGiftsByPrice();
+        Gift giftReturned = null;
+        for (Gift gift : this.gifts) {
+            if (gift.getCategory().equals(category)) {
+                giftReturned = gift;
+                break;
+            }
+        }
+        if (giftReturned.getQuantity() > 0) {
+            return giftReturned;
+        }
+        return null;
+    }
+    public void allocateRestGifts(final List<ChildInput> children) {
+        for (ChildInput childInput : children) {
+            Gift gift = null;
+            if (childInput.getGiftsPreferences().size() > 0) {
+                gift = findCheapestGift(childInput.getGiftsPreferences().get(0));
+            } else {
+                break;
+            }
+            if (gift != null) {
+//                this.children.get(children.indexOf(childInput)).addGift(gift);
+                childInput.addGift(gift);
+                if (gift.getQuantity() == 0) {
+                    this.gifts.remove(gift);
+                }
+            }
+        }
+    }
+
+    public void setChildren(List<ChildInput> children) {
+        this.children = children;
+    }
+
+    public void removeGift(final Gift gift) {
+        this.gifts.remove(gift);
     }
     /**
      * Getter for the list of children

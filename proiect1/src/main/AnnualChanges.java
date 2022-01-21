@@ -9,6 +9,13 @@ public class AnnualChanges {
     private List<ChildUpdate> childrenUpdates;
     private String strategy;
     /**
+     * Getter for the strategy
+     */
+    public String getStrategy() {
+        return strategy;
+    }
+
+    /**
      * Getter for the new budget of santa
      */
     public int getNewSantaBudget() {

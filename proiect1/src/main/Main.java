@@ -7,6 +7,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
 import common.Constants;
 import enums.AgeCategory;
+import enums.ElvesType;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,6 +21,14 @@ public final class Main {
 
     private Main() {
         ///constructor for checkstyle
+    }
+    public static List<GiftOutput> setGiftOutput(final ChildInput childInput) {
+        List<GiftOutput> giftOutputs = new ArrayList<>();
+        for (Gift gift : childInput.getReceivedGifts()) {
+            GiftOutput giftOutput = new GiftOutput(gift.getProductName(), gift.getPrice(), gift.getCategory());
+            giftOutputs.add(giftOutput);
+        }
+        return giftOutputs;
     }
     /**
      * Method used to create a new instane of ChildOutput class
@@ -35,7 +45,8 @@ public final class Main {
         childOutput.setLastName(childInput.getLastName());
         childOutput.setGiftsPreferences(childInput.getGiftsPreferences());
         childOutput.setId(childInput.getId());
-        childOutput.setReceivedGifts(childInput.getReceivedGifts());
+        List<GiftOutput> giftOutputs = setGiftOutput(childInput);
+        childOutput.setReceivedGifts(giftOutputs);
         childOutput.setNiceScoreHistory(childInput.getScores());
         return childOutput;
     }
@@ -137,6 +148,10 @@ public final class Main {
         for (ChildInput childInput : children) {
             Double averageScore = ChildFactory.createChild(establishAgeCategory(childInput),
                     childInput.getScores()).getAverageScore();
+            averageScore += averageScore * childInput.getNiceScoreBonus() / 100;
+            if (averageScore.compareTo(10.0) > 0) {
+                averageScore = 10.0;
+            }
                 childInput.setAverageScore(averageScore);
                 if (averageScore != null) {
                     sumAverageScores += averageScore;
@@ -150,8 +165,13 @@ public final class Main {
             } else {
                 budgetAllocated = childInput.getAverageScore() * budgetUnit;
             }
+            if(childInput.getElf().compareTo(ElvesType.BLACK) == 0) {
+                budgetAllocated -= budgetAllocated * 30 / 100;
+            }
+            if(childInput.getElf().compareTo(ElvesType.PINK) == 0) {
+                budgetAllocated += budgetAllocated * 30 / 100;
+            }
             childInput.setBudgetAllocated(budgetAllocated);
-
         }
     }
     /**
@@ -188,13 +208,22 @@ public final class Main {
             children.remove(childInput);
         }
     }
+    public static List<ChildInput> childrenWithoutGifts(final List<ChildInput> children) {
+        List<ChildInput> childInputs = new ArrayList<>();
+        for (ChildInput childInput : children) {
+            if (childInput.getElf().equals(ElvesType.YELLOW) && childInput.getReceivedGifts().size() == 0) {
+                childInputs.add(childInput);
+            }
+        }
+        return childInputs;
+    }
     /**
      * Function that applies updates and adds a new list of children after each round
      */
     public static void changesForEachRound(final List<AnnualChanges> annualChanges,
                                            final SantaClaus santaClaus,
                                            final AnnualChildren annualChildren,
-                                           final int numberOfYears) {
+                                           final int numberOfYears, int i) {
         int cnt = 1;
         for (AnnualChanges currAnualChange : annualChanges) {
             if (cnt > numberOfYears) {
@@ -214,12 +243,25 @@ public final class Main {
 
             santaClaus.updateChanges(currAnualChange.getChildrenUpdates(), currAnualChange);
             // resorteaza copiii in functie de id
-            sortChildrenById(santaClaus.getChildren());
             // recalculeaza averageScoreurile
             calculateBudget(santaClaus.getChildren(), santaClaus);
             // realoca cadourile pentru copii
-            santaClaus.allocateGiftsForChildren();
+//            santaClaus.allocateGiftsForChildren();
+            sortChildrenById(santaClaus.getChildren());
+            santaClaus.setChildren(GiftsFactory.sortChildren(currAnualChange.getStrategy(), santaClaus.getChildren()).sortChildren());
 
+//            santaClaus.allocateGiftsWithStrategy(currAnualChange.getStrategy());
+            santaClaus.allocateGiftsForChildren();
+            sortChildrenById(santaClaus.getChildren());
+            List<ChildInput> children = childrenWithoutGifts(santaClaus.getChildren());
+//            if (i == 25) {
+//                for (ChildInput childInput : children) {
+//                    System.out.println(childInput.getId());
+//                }
+//            }
+            if (children.size() != 0) {
+                santaClaus.allocateRestGifts(children);
+            }
             addChildrenToOutput(santaClaus.getChildren(), annualChildren);
 
         }
@@ -245,11 +287,14 @@ public final class Main {
             sortChildrenById(santaClaus.getChildren());
             calculateBudget(santaClaus.getChildren(), santaClaus);
             santaClaus.allocateGiftsForChildren();
+            List<ChildInput> children = childrenWithoutGifts(santaClaus.getChildren());
+
+            santaClaus.allocateRestGifts(children);
             addChildrenToOutput(santaClaus.getChildren(), annualChildren);
             changesForEachRound(inputData.getAnnualChanges(),
                     santaClaus,
                     annualChildren,
-                    inputData.getNumberOfYears());
+                    inputData.getNumberOfYears(), i);
             writeOutput(santaClaus, annualChildren, i);
         }
         Checker.calculateScore();
