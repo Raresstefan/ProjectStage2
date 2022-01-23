@@ -40,7 +40,8 @@ that need to be changed
 - niceScore, a new value for the niceScore of the child
 - giftsPreferences, a list with new preferences for gifts
 
-Write the output to json file
+
+## Write the output to json file
 
 I used separated classes to write the output into json files
 
