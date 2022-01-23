@@ -127,7 +127,7 @@
       "giftsPreferences" : [ "Books", "Clothes" ],
       "averageScore" : 9.666666666666666,
       "niceScoreHistory" : [ 9.0, 10.0, 10.0 ],
-      "assignedBudget" : 684.2518248175182,
+      "assignedBudget" : 675.6216216216216,
       "receivedGifts" : [ {
         "productName" : "Diary of a Wimpy Kid",
         "price" : 25.0,
@@ -144,14 +144,10 @@
       "city" : "Craiova",
       "age" : 12,
       "giftsPreferences" : [ "Books", "Board Games" ],
-      "averageScore" : 8.6,
+      "averageScore" : 8.833333333333334,
       "niceScoreHistory" : [ 3.0, 10.0, 10.0 ],
-      "assignedBudget" : 608.7481751824818,
+      "assignedBudget" : 617.3783783783783,
       "receivedGifts" : [ {
-        "productName" : "Diary of a Wimpy Kid",
-        "price" : 25.0,
-        "category" : "Books"
-      }, {
         "productName" : "Monopoly",
         "price" : 30.0,
         "category" : "Board Games"
@@ -167,12 +163,8 @@
       "giftsPreferences" : [ "Books", "Clothes" ],
       "averageScore" : 9.75,
       "niceScoreHistory" : [ 9.0, 10.0, 10.0, 10.0 ],
-      "assignedBudget" : 672.3599999999999,
+      "assignedBudget" : 661.7716535433071,
       "receivedGifts" : [ {
-        "productName" : "Diary of a Wimpy Kid",
-        "price" : 25.0,
-        "category" : "Books"
-      }, {
         "productName" : "Shoes",
         "price" : 70.0,
         "category" : "Clothes"
@@ -184,14 +176,10 @@
       "city" : "Craiova",
       "age" : 13,
       "giftsPreferences" : [ "Books", "Board Games" ],
-      "averageScore" : 9.0,
+      "averageScore" : 9.3,
       "niceScoreHistory" : [ 3.0, 10.0, 10.0, 10.0 ],
-      "assignedBudget" : 620.64,
+      "assignedBudget" : 631.228346456693,
       "receivedGifts" : [ {
-        "productName" : "Diary of a Wimpy Kid",
-        "price" : 25.0,
-        "category" : "Books"
-      }, {
         "productName" : "Monopoly",
         "price" : 30.0,
         "category" : "Board Games"

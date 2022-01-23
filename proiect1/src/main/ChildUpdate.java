@@ -10,6 +10,13 @@ public class ChildUpdate {
     private List<Category> giftsPreferences;
     private ElvesType elf;
     /**
+     * Getter for the type of elf
+     */
+    public ElvesType getElf() {
+        return elf;
+    }
+
+    /**
      * Getter for the id
      */
     public int getId() {

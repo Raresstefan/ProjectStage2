@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SantaClaus {
+public final class SantaClaus {
     private static SantaClaus instance;
     private List<ChildInput> children;
     private int budget;
@@ -51,7 +51,7 @@ public class SantaClaus {
      */
     public Gift searchGiftByPreference(final Category category) {
         for (Gift gift : this.gifts) {
-            if (gift.getCategory().equals(category)) {
+            if (gift.getCategory().equals(category) && gift.getQuantity() > 0) {
                 return gift;
             }
         }
@@ -133,6 +133,50 @@ public class SantaClaus {
         for (ChildInput childInput : this.children) {
             childInput.allocateGiftFromSanta(this);
         }
+    }
+    /**
+     * Method that finds the cheapest gift that belongs to the
+     * specified category, having the quantity > 0
+     */
+    public Gift findCheapestGift(final Category category) {
+        sortGiftsByPrice();
+        Gift giftReturned = null;
+        for (Gift gift : this.gifts) {
+            if (gift.getCategory().equals(category)) {
+                giftReturned = gift;
+                break;
+            }
+        }
+        if (giftReturned.getQuantity() > 0) {
+            return giftReturned;
+        }
+        return null;
+    }
+    /**
+     * Method that adds the remaining gifts to the children that have
+     * yellow elf and no gift assigned
+     */
+    public void allocateRestGifts(final List<ChildInput> children) {
+        for (ChildInput childInput : children) {
+            Gift gift = null;
+            if (childInput.getGiftsPreferences().size() > 0) {
+                gift = findCheapestGift(childInput.getGiftsPreferences().get(0));
+            } else {
+                break;
+            }
+            if (gift != null) {
+                childInput.addGift(gift);
+                if (gift.getQuantity() == 0) {
+                    this.gifts.remove(gift);
+                }
+            }
+        }
+    }
+    /**
+     * Setter for the list of children
+     */
+    public void setChildren(final List<ChildInput> children) {
+        this.children = children;
     }
     /**
      * Getter for the list of children

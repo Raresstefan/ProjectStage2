@@ -8,6 +8,19 @@ public class Gift {
     private Category category;
     private int quantity;
     /**
+     * Getter for quantity
+     */
+    public int getQuantity() {
+        return quantity;
+    }
+    /**
+     * Method that decrements the quantity
+     * Used when santa assign this gift to a child
+     */
+    public void decrementQuantity() {
+        this.quantity -= 1;
+    }
+    /**
      * Setter for the name of the product
      */
     public void setProductName(final String productName) {

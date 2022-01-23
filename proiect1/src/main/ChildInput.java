@@ -20,6 +20,20 @@ public class ChildInput {
     private List<Gift> receivedGifts;
     private Double averageScore;
     /**
+     * Getter for the nice score bonus
+     */
+    public int getNiceScoreBonus() {
+        return niceScoreBonus;
+    }
+    /**
+     * Getter for the type of elf assigned to
+     * the child
+     */
+    public ElvesType getElf() {
+        return elf;
+    }
+
+    /**
      * Setter for the average sore
      */
     public void setAverageScore(final Double averageScore) {
@@ -117,6 +131,10 @@ public class ChildInput {
                 this.giftsPreferences.add(0, category);
             }
         }
+        // Set the new elf type
+        if (childUpdate.getElf() != null) {
+            this.elf = childUpdate.getElf();
+        }
     }
     /**
      * Method that assigns a gift to a child
@@ -130,6 +148,7 @@ public class ChildInput {
                     if (!(receivedGifts.contains(gift)) && (theBudget - gift.getPrice()) > 0.0) {
                         receivedGifts.add(gift);
                         theBudget -= gift.getPrice();
+                        gift.decrementQuantity();
                     }
                 }
             }
@@ -145,5 +164,13 @@ public class ChildInput {
      */
     public List<Double> getScores() {
         return scores;
+    }
+    /**
+     * Adds the specified gift to the receivedGifts list
+     */
+    public void addGift(final Gift gift) {
+        this.receivedGifts.add(gift);
+        gift.decrementQuantity();
+
     }
 }

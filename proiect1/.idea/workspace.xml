@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="" />
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/BabyAverageScoreStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/BabyAverageScoreStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/BabyChild.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/Child.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/ChildFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/ChildFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/ChildFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/ChildInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/ChildInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/Gift.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/Gift.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/GiftOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/GiftOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/GiftsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/GiftsFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/IdAssignGiftStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/IdAssignGiftStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/KidChild.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/NiceScoreAssignGiftStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/NiceScoreAssignGiftStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/NiceScoreCityAssignGiftStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/NiceScoreCityAssignGiftStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/SantaClaus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/SantaClaus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/TeenKid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/YoungAdultChild.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/CityStrategyEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/CityStrategyEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/ElvesType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/ElvesType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssignGiftStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssignGiftStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/BabyAverageScoreStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BabyAverageScoreStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/BabyChild.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Child.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ChildFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ChildFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ChildInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ChildInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Gift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Gift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GiftOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GiftOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GiftsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GiftsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/IdAssignGiftStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/IdAssignGiftStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KidChild.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/NiceScoreAssignGiftStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/NiceScoreAssignGiftStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/NiceScoreCityAssignGiftStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/NiceScoreCityAssignGiftStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/SantaClaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SantaClaus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/TeenKid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/YoungAdultChild.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -53,10 +103,23 @@
       <option name="presentableId" value="Default" />
       <updated>1638807258397</updated>
       <workItem from="1642548705443" duration="1756000" />
+      <workItem from="1642588523723" duration="20395000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

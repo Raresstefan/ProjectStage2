@@ -1,5 +1,7 @@
 package main;
 
+import common.Constants;
+
 import java.util.List;
 
 public class BabyAverageScoreStrategy implements AverageScoreStrategy {
@@ -16,6 +18,6 @@ public class BabyAverageScoreStrategy implements AverageScoreStrategy {
      */
     @Override
     public Double getAverageScore() {
-        return 10.0;
+        return Constants.NUMBERTEN;
     }
 }
