@@ -20,7 +20,6 @@ public class Gift {
     public void decrementQuantity() {
         this.quantity -= 1;
     }
-
     /**
      * Setter for the name of the product
      */

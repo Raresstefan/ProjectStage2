@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SantaClaus {
+public final class SantaClaus {
     private static SantaClaus instance;
     private List<ChildInput> children;
     private int budget;
@@ -134,6 +134,10 @@ public class SantaClaus {
             childInput.allocateGiftFromSanta(this);
         }
     }
+    /**
+     * Method that finds the cheapest gift that belongs to the
+     * specified category, having the quantity > 0
+     */
     public Gift findCheapestGift(final Category category) {
         sortGiftsByPrice();
         Gift giftReturned = null;
@@ -148,6 +152,10 @@ public class SantaClaus {
         }
         return null;
     }
+    /**
+     * Method that adds the remaining gifts to the children that have
+     * yellow elf and no gift assigned
+     */
     public void allocateRestGifts(final List<ChildInput> children) {
         for (ChildInput childInput : children) {
             Gift gift = null;
@@ -157,7 +165,6 @@ public class SantaClaus {
                 break;
             }
             if (gift != null) {
-//                this.children.get(children.indexOf(childInput)).addGift(gift);
                 childInput.addGift(gift);
                 if (gift.getQuantity() == 0) {
                     this.gifts.remove(gift);
@@ -165,13 +172,11 @@ public class SantaClaus {
             }
         }
     }
-
-    public void setChildren(List<ChildInput> children) {
+    /**
+     * Setter for the list of children
+     */
+    public void setChildren(final List<ChildInput> children) {
         this.children = children;
-    }
-
-    public void removeGift(final Gift gift) {
-        this.gifts.remove(gift);
     }
     /**
      * Getter for the list of children

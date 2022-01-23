@@ -5,11 +5,12 @@ import java.util.List;
 
 public class IdAssignGiftStrategy implements AssignGiftStrategy {
     private List<ChildInput> children;
-
-    public IdAssignGiftStrategy(List<ChildInput> children) {
+    public IdAssignGiftStrategy(final List<ChildInput> children) {
         this.children = children;
     }
-
+    /**
+     * Sorts the list of children by their Id
+     */
     public static void sortChildrenById(final List<ChildInput> children) {
         int i, j;
         for (i = 0; i < children.size() - 1; i++) {
@@ -20,8 +21,11 @@ public class IdAssignGiftStrategy implements AssignGiftStrategy {
             }
         }
     }
-
-
+    /**
+     * Method overriden by every assignGift strategy
+     * It returns a list of children in the order in which
+     * santa assigns them gifts
+     */
     @Override
     public List<ChildInput> sortChildren() {
         sortChildrenById(this.children);

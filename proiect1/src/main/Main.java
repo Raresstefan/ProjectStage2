@@ -22,10 +22,16 @@ public final class Main {
     private Main() {
         ///constructor for checkstyle
     }
+    /**
+     * Sets the values of the giftOutput object, what we write
+     * in json output files
+     */
     public static List<GiftOutput> setGiftOutput(final ChildInput childInput) {
         List<GiftOutput> giftOutputs = new ArrayList<>();
         for (Gift gift : childInput.getReceivedGifts()) {
-            GiftOutput giftOutput = new GiftOutput(gift.getProductName(), gift.getPrice(), gift.getCategory());
+            GiftOutput giftOutput =
+                    new GiftOutput(gift.getProductName(),
+                            gift.getPrice(), gift.getCategory());
             giftOutputs.add(giftOutput);
         }
         return giftOutputs;
@@ -67,16 +73,20 @@ public final class Main {
      * Method that returns the age category of a child based on it's age
      */
     public static AgeCategory establishAgeCategory(final ChildInput child) {
-        if (child.getAge() < 5) {
+        if (child.getAge() < Constants.NUMBERFIVE) {
             return AgeCategory.BABY;
         }
-        if (child.getAge() >= 5 && child.getAge() < 12) {
+        if (child.getAge() >= Constants.NUMBERFIVE
+                &&
+                child.getAge() < Constants.NUMBERTWELVE) {
             return AgeCategory.KID;
         }
-        if (child.getAge() >= 12 && child.getAge() <= 18) {
+        if (child.getAge() >= Constants.NUMBERTWELVE
+                &&
+                child.getAge() <= Constants.NUMBEREIGHTEEN) {
             return AgeCategory.TEEN;
         }
-        if (child.getAge() > 18) {
+        if (child.getAge() > Constants.NUMBEREIGHTEEN) {
             return AgeCategory.YOUNGADULT;
         }
         return null;
@@ -88,7 +98,7 @@ public final class Main {
     public static void addChildrenOnList(final List<ChildInput> children,
                                          final SantaClaus santaClaus) {
         for (ChildInput child : children) {
-            if (child.getAge() <= 18) {
+            if (child.getAge() <= Constants.NUMBEREIGHTEEN) {
                 santaClaus.addChildToList(child);
                 child.getScores().add(child.getNiceScore());
             }
@@ -148,9 +158,11 @@ public final class Main {
         for (ChildInput childInput : children) {
             Double averageScore = ChildFactory.createChild(establishAgeCategory(childInput),
                     childInput.getScores()).getAverageScore();
-            averageScore += averageScore * childInput.getNiceScoreBonus() / 100;
-            if (averageScore.compareTo(10.0) > 0) {
-                averageScore = 10.0;
+            averageScore += averageScore
+                    *
+                    childInput.getNiceScoreBonus() / Constants.NUMBERONEHUNDREED;
+            if (averageScore.compareTo(Constants.NUMBERTEN) > 0) {
+                averageScore = Constants.NUMBERTEN;
             }
                 childInput.setAverageScore(averageScore);
                 if (averageScore != null) {
@@ -165,11 +177,15 @@ public final class Main {
             } else {
                 budgetAllocated = childInput.getAverageScore() * budgetUnit;
             }
-            if(childInput.getElf().compareTo(ElvesType.BLACK) == 0) {
-                budgetAllocated -= budgetAllocated * 30 / 100;
+            if (childInput.getElf().compareTo(ElvesType.BLACK) == 0) {
+                budgetAllocated -= budgetAllocated
+                        *
+                        Constants.NUMBERTHIRTY / Constants.NUMBERONEHUNDREED;
             }
-            if(childInput.getElf().compareTo(ElvesType.PINK) == 0) {
-                budgetAllocated += budgetAllocated * 30 / 100;
+            if (childInput.getElf().compareTo(ElvesType.PINK) == 0) {
+                budgetAllocated += budgetAllocated
+                        *
+                        Constants.NUMBERTHIRTY / Constants.NUMBERONEHUNDREED;
             }
             childInput.setBudgetAllocated(budgetAllocated);
         }
@@ -200,7 +216,7 @@ public final class Main {
     public static void removeYoungAdults(final List<ChildInput> children) {
         List<ChildInput> childrenToRemove = new ArrayList<>();
         for (ChildInput childInput : children) {
-            if (childInput.getAge() > 18) {
+            if (childInput.getAge() > Constants.NUMBEREIGHTEEN) {
                 childrenToRemove.add(childInput);
             }
         }
@@ -208,10 +224,16 @@ public final class Main {
             children.remove(childInput);
         }
     }
+    /**
+     * Method that creates a list of chidren that hasn't received any gift so far
+     * and they have a yellow elf
+     */
     public static List<ChildInput> childrenWithoutGifts(final List<ChildInput> children) {
         List<ChildInput> childInputs = new ArrayList<>();
         for (ChildInput childInput : children) {
-            if (childInput.getElf().equals(ElvesType.YELLOW) && childInput.getReceivedGifts().size() == 0) {
+            if (childInput.getElf().equals(ElvesType.YELLOW)
+                    &&
+                    childInput.getReceivedGifts().size() == 0) {
                 childInputs.add(childInput);
             }
         }
@@ -223,7 +245,7 @@ public final class Main {
     public static void changesForEachRound(final List<AnnualChanges> annualChanges,
                                            final SantaClaus santaClaus,
                                            final AnnualChildren annualChildren,
-                                           final int numberOfYears, int i) {
+                                           final int numberOfYears) {
         int cnt = 1;
         for (AnnualChanges currAnualChange : annualChanges) {
             if (cnt > numberOfYears) {
@@ -238,32 +260,22 @@ public final class Main {
             if (currAnualChange.getNewChildren() != null) {
                 addChildrenOnList(currAnualChange.getNewChildren(), santaClaus);
             }
-
             // realizeaza modificarile cerute
-
             santaClaus.updateChanges(currAnualChange.getChildrenUpdates(), currAnualChange);
             // resorteaza copiii in functie de id
             // recalculeaza averageScoreurile
             calculateBudget(santaClaus.getChildren(), santaClaus);
             // realoca cadourile pentru copii
-//            santaClaus.allocateGiftsForChildren();
             sortChildrenById(santaClaus.getChildren());
-            santaClaus.setChildren(GiftsFactory.sortChildren(currAnualChange.getStrategy(), santaClaus.getChildren()).sortChildren());
-
-//            santaClaus.allocateGiftsWithStrategy(currAnualChange.getStrategy());
+            santaClaus.setChildren(GiftsFactory.sortChildren(currAnualChange.getStrategy(),
+                    santaClaus.getChildren()).sortChildren());
             santaClaus.allocateGiftsForChildren();
             sortChildrenById(santaClaus.getChildren());
             List<ChildInput> children = childrenWithoutGifts(santaClaus.getChildren());
-//            if (i == 25) {
-//                for (ChildInput childInput : children) {
-//                    System.out.println(childInput.getId());
-//                }
-//            }
             if (children.size() != 0) {
                 santaClaus.allocateRestGifts(children);
             }
             addChildrenToOutput(santaClaus.getChildren(), annualChildren);
-
         }
     }
     /**
@@ -274,7 +286,7 @@ public final class Main {
     public static void main(final String[] args) throws IOException {
         // iterate through each inputTest
         int i;
-        for (i = 1; i <= 30; i++) {
+        for (i = 1; i <= Constants.NUMBERTHIRTY; i++) {
             // citire
             InputData inputData = readInput(i);
             AnnualChildren annualChildren = new AnnualChildren();
@@ -287,14 +299,15 @@ public final class Main {
             sortChildrenById(santaClaus.getChildren());
             calculateBudget(santaClaus.getChildren(), santaClaus);
             santaClaus.allocateGiftsForChildren();
+            // asignare cadouri copiilor care au elf galben si care
+            // nu au primit niciun caoud de pe lista mosului
             List<ChildInput> children = childrenWithoutGifts(santaClaus.getChildren());
-
             santaClaus.allocateRestGifts(children);
             addChildrenToOutput(santaClaus.getChildren(), annualChildren);
             changesForEachRound(inputData.getAnnualChanges(),
                     santaClaus,
                     annualChildren,
-                    inputData.getNumberOfYears(), i);
+                    inputData.getNumberOfYears());
             writeOutput(santaClaus, annualChildren, i);
         }
         Checker.calculateScore();

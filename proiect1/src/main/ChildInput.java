@@ -19,12 +19,6 @@ public class ChildInput {
     private Double budgetAllocated;
     private List<Gift> receivedGifts;
     private Double averageScore;
-    private Double cityAverageScore;
-
-    public void setCityAverageScore(Double cityAverageScore) {
-        this.cityAverageScore = cityAverageScore;
-    }
-
     /**
      * Getter for the nice score bonus
      */
@@ -138,7 +132,7 @@ public class ChildInput {
             }
         }
         // Set the new elf type
-        if(childUpdate.getElf() != null) {
+        if (childUpdate.getElf() != null) {
             this.elf = childUpdate.getElf();
         }
     }
@@ -156,9 +150,6 @@ public class ChildInput {
                         theBudget -= gift.getPrice();
                         gift.decrementQuantity();
                     }
-//                    if (gift.getQuantity() == 0) {
-//                        santaClaus.removeGift(gift);
-//                    }
                 }
             }
     }
@@ -174,6 +165,9 @@ public class ChildInput {
     public List<Double> getScores() {
         return scores;
     }
+    /**
+     * Adds the specified gift to the receivedGifts list
+     */
     public void addGift(final Gift gift) {
         this.receivedGifts.add(gift);
         gift.decrementQuantity();
